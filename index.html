@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Arpit | Personal Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                Arpit
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#todo">To-Do</a>
+                </li>
+
+                <li>
+                    <a href="#products">Products</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section class="hero">
+
+        <div>
+
+            <p class="small-title">
+                HELLO, I'M
+            </p>
+
+            <h1>
+                Arpit
+            </h1>
+
+            <h2>
+                Web Development Student
+            </h2>
+
+            <p>
+                I create responsive and interactive websites
+                using HTML, CSS and JavaScript.
+            </p>
+
+            <a href="#projects"
+               class="primary-btn">
+                View My Projects
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="about"
+             class="section">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-container">
+
+            <div class="about-card">
+
+                <h3>
+                    Who I Am
+                </h3>
+
+                <p>
+                    I am a web development student interested
+                    in creating modern, responsive and
+                    user-friendly websites.
+                </p>
+
+                <p>
+                    I am learning HTML, CSS and JavaScript
+                    and improving my programming skills by
+                    developing practical projects.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>
+                    My Skills
+                </h3>
+
+                <div class="skills">
+
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                    <span>DOM Manipulation</span>
+                    <span>Local Storage</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects"
+             class="section projects-section">
+
+        <h2 class="section-title">
+            My Projects
+        </h2>
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    
+                </div>
+
+                <h3>
+                    Responsive Website
+                </h3>
+
+                <p>
+                    A responsive website created using
+                    HTML and CSS media queries.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    
+                </div>
+
+                <h3>
+                    To-Do List
+                </h3>
+
+                <p>
+                    A JavaScript To-Do application with
+                    localStorage data persistence.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    
+                </div>
+
+                <h3>
+                    Product Listing
+                </h3>
+
+                <p>
+                    An interactive product page with
+                    filtering and sorting functionality.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="todo"
+             class="section">
+
+        <h2 class="section-title">
+            To-Do List
+        </h2>
+
+        <div class="todo-container">
+
+            <div class="todo-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task">
+
+                <button
+                    onclick="addTask()">
+                    Add Task
+                </button>
+
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+        </div>
+
+    </section>
+
+    <section id="products"
+             class="section products-section">
+
+        <h2 class="section-title">
+            Product Listing
+        </h2>
+
+
+        <!-- FILTER AND SORT -->
+
+        <div class="filters">
+
+            <select id="categoryFilter"
+                    onchange="displayProducts()">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="Laptop">
+                    Laptop
+                </option>
+
+                <option value="Phone">
+                    Phone
+                </option>
+
+                <option value="Accessory">
+                    Accessory
+                </option>
+
+            </select>
+
+
+            <select id="sortOption"
+                    onchange="displayProducts()">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="priceLow">
+                    Price: Low to High
+                </option>
+
+                <option value="priceHigh">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Rating
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div id="productContainer"
+             class="product-grid">
+
+        </div>
+
+    </section>
+
+    <section id="contact"
+             class="section">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <div class="contact-container">
+
+            <form id="contactForm">
+
+                <input
+                    type="text"
+                    id="contactName"
+                    placeholder="Your Name"
+                    required>
+
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    placeholder="Your Email"
+                    required>
+
+
+                <textarea
+                    id="contactMessage"
+                    placeholder="Your Message"
+                    required>
+                </textarea>
+
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Get In Touch
+                </h3>
+
+                <p>
+                    Email: arpit22@gmail.com
+                </p>
+
+                <p>
+                    Phone: +91 7654432465
+                </p>
+
+                <p>
+                    Location: India
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            © 2026 Arpit. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
